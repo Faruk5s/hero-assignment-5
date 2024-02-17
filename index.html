@@ -15,7 +15,7 @@
 </head>
 <body class="pt-5 ">
     <header>
-        <div class="navbar bg-base-100">
+        <div class="navbar container mx-auto bg-base-100">
             <div class="navbar-start">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -40,7 +40,7 @@
     </header>
 
     <main>
-        <section class="relative  bg-cover rounded-3xl bg-no-repeat h-[550px]" style="background-image: url(images/banner.png)">
+        <section class="lg:relative container mx-auto  bg-cover rounded-3xl bg-no-repeat h-auto lg:h-[550px]" style="background-image: url(images/banner.png)">
           <div class="relative hero" >
             
             <div class="hero-content text-center text-neutral-content">
@@ -55,8 +55,8 @@
               </div>
             </div>
           </div>
-          <div class="flex justify-center">
-            <div class="border border-green-500 absolute bottom-[-25px] right-[50px] bg-white rounded-2xl">
+          <div class="flex flex-col lg:flex-row justify-center">
+            <div class="border border-green-500 lg:absolute bottom-[-25px] right-[50px] bg-white rounded-2xl">
               <div class="flex px-20">
                 <img src="images/stoppage.png" alt="">
                 <div>
@@ -65,7 +65,7 @@
                 </div>
               </div>
             </div>
-            <div class="border border-green-500 absolute bottom-[-25px]  bg-white rounded-2xl ml-5">
+            <div class="border border-green-500 lg:absolute bottom-[-25px]  bg-white rounded-2xl ">
               <div class="flex px-20">
                 <img src="images/ticket-cupon.png" alt="">
                 <div>
@@ -74,7 +74,7 @@
                 </div>
               </div>
             </div>
-            <div class="border border-green-500 absolute bottom-[-25px] left-[50px] bg-white rounded-2xl">
+            <div class="border border-green-500 lg:absolute bottom-[-25px] left-[50px] bg-white rounded-2xl">
               <div class="flex px-20">
                 <img src="images/people.png" alt="">
                 <div>
@@ -89,16 +89,23 @@
         </section>
 
         <!-- cupon section start -->
+        <h1 class="text-center text-4xl mt-20">Best offers for you</h1>
+        <section class="flex container mx-auto mt-10 p-4 ">
+          <!-- <div>
+            <h1 class="text-center">Best offers for you</h1>
+          </div> -->
+          <div class="flex flex-col lg:flex-row p-3 lg:p-10 lg:space-x-56">
+           
 
-        <section class="flex mt-10 p-4 hidden">
-          <div class="flex p-10">
-            <div id="card1" class="flex" style="height:auto; width: auto; left: 135px; right: -135px; top: 968px; bottom: -968; justify-content: flex-start;">
-              <div class="text-start p-10">
+            <div id="card1" class="flex flex-col lg:flex-row" style="height: auto; width: auto; left: 135px; right: -135px; top: 968px; bottom: -968; left: 200px; justify-content:flex-start;">
+              <div class="text-start p-10 border-b lg:border-r-2 border-dashed border-white relative">
                 <h1 class="text-4xl font-extrabold">15% OFF</h1>
               <p class="text-2xl">On your card</p>
               <p class="text-2xl">use january</p>
+              <div class="w-10 h-10 rounded-full absolute top-[-20px] right-[-20px] bg-white"></div>
+              <div class="w-10 h-10 rounded-full absolute bottom-[-20px] right-[-20px] bg-white"></div>
               </div>
-              <img style="justify-content: center;" src="images/cupon-devider.png" alt="">
+              
               <div class="text-end p-10">
                 <h1 class="text-4xl">Cupen250</h1>
                 <p class="text-2xl">copun mama</p>
@@ -106,13 +113,15 @@
 
 
             </div>
-            <div id="card1" class="flex" style="height: auto; width: auto; left: 135px; right: -135px; top: 968px; bottom: -968; left: 200px; ;">
-              <div class="text-start p-10">
+            <div id="card1" class="flex flex-col lg:flex-row" style="height: auto; width: auto; left: 135px; right: -135px; top: 968px; bottom: -968; left: 200px; justify-content:flex-end;">
+              <div class="text-start p-10 border-b lg:border-r-2 border-dashed border-white relative">
                 <h1 class="text-4xl font-extrabold">15% OFF</h1>
               <p class="text-2xl">On your card</p>
               <p class="text-2xl">use january</p>
+              <div class="w-10 h-10 rounded-full absolute top-[-20px] right-[-20px] bg-white"></div>
+              <div class="w-10 h-10 rounded-full absolute bottom-[-20px] right-[-20px] bg-white"></div>
               </div>
-              <img style="justify-content: center;" src="images/cupon-devider.png" alt="">
+              
               <div class="text-end p-10">
                 <h1 class="text-4xl">Cupen250</h1>
                 <p class="text-2xl">copun mama</p>
@@ -120,38 +129,19 @@
 
 
             </div>
-            <button>Hello</button>
+            
 
           </div>
         </section>
         <!-- cupon end -->
 
 
-        <section class="mt-10">
+        <section class="mt-10 container mx-auto">
           <div>
             <h1 class="text-center text-4xl p-4">P.H Paribahan</h1>
             <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The integrated 
               testing features allow for a streamlined </p>
-
-              <div class="min-w-full">
-                <div class="flex w-full">
-                  <div class="flex bg-slate-50">
-                    <img src="images/bus-logo.png" alt="">
-                    <div>
-                      <h1 class="text-4xl">Greenline Paribahan</h1>
-                    <p>Coach-009-WEB ! AC_Business</p>
-                    </div>
-                  </div>
-                  <div class="">
-                    <a style="color:rgb(29, 209, 0);" class="btn">Bus</a>
-                    <img src="images/bus-icon.png" alt="">
-                  </div>
-
-                </div>
-
-                <div></div>
-
-              </div>
+              
           </div>
 
         </section>
