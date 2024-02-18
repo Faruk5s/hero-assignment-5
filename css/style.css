@@ -4,21 +4,13 @@ body{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  height: auto;
-  width: auto;
+  
 }
 .btn{
    color:rgb(29, 209, 0);
 }
 
-#cup{
-  height: 220px;
-  width: 573px;
-}
-#dup{
-  height: 220px;
-  width: 573px;
-}
+
 
 
 #card1{
