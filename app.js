@@ -36,6 +36,70 @@ container.appendChild(div);
 }
 
 
+const btn =document.getElementById("apply-btn");
+btn.addEventListener("click", function () {
+    const couponElement = document.getElementById("input-field").value;
+    const couponCode =couponElement.split(" ").join("").toUpperCase();
+    if (totalPrice <=2200) {
+        if(couponCode === "NEW15"){
+            const discountElement = document.getElementById("Grand-Total");
+            const discountAmount = totalPrice * 0.15;
+            discountElement.innerText = discountAmount.toFixed(2);
+
+            const GrandTotal= document.getElementById("total-seatBd");
+            GrandTotal.innerText = total-seatBd - discountAmount.toFixed(2);
+            document.getElementById("input-field").value = "";
+
+
+        } else{
+            alert("Invalid Coupon");
+            document.getElementById("input-field").value = "";
+        }
+
+        if(couponCode === "Couple20"){
+            const discountElement = document.getElementById("Grand-Total");
+            const discountAmount = totalPrice * 0.2;
+            discountElement.innerText = discountAmount.toFixed(2);
+
+            const GrandTotal= document.getElementById("total-seatBd");
+            GrandTotal.innerText = total-seatBd - discountAmount.toFixed(2);
+            document.getElementById("input-field").value = "";
+
+
+        } else{
+            alert("Invalid Coupon");
+            document.getElementById("input-field").value = "";
+        }
+
+
+        }
+         else{
+            alert("Please at less buy 4 seat");
+            document.getElementById("input-field").value = "";
+
+        }
+        
+    }
+);
+
+
+const totalTickets = 40;
+
+
+function buyTickets(numTickets) {
+   
+    if (numTickets <= 0) {
+        return "less no possible";
+    } else if (numTickets => 4) {
+        return "highest 4 ";
+    } else if (numTickets > totalTickets) {
+        return "no possible";
+    } else {
+        totalTickets -= numTickets; 
+        return " ${numTickets}  ${totalTickets}";
+    }
+}
+
 
 
 
