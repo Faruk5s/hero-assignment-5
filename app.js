@@ -9,13 +9,37 @@ for (const seat of allSeat) {
      count =count + 1;
      counts =counts -1;
      perSeat =perSeat + 550;
-     document.getElementById("seat-count").innerText = count;
+     
+     if(count>4){
+        alert("you cant buy more");
+        return;
+     }
+     const button =document.getElementById('apply-btn');
 
+
+if(count===4){
+   button.removeAttribute("disabled");
+} else{
+    button.setAttribute("disabled","true")
+}
+
+const nextBtn = document.getElementById("btn-next");
+    const phoneNumber = document.getElementById("phone-number");
+    phoneNumber.addEventListener("keyup", function (e) {
+      if (count > 0 && phoneNumber.value.length > 0) {
+        nextBtn.removeAttribute("disabled");
+      } else {
+        nextBtn.setAttribute("disabled", "true");
+      }
+    });
+
+     document.getElementById("seat-count").innerText = count;
     
 
     seat.classList.add('bg-green-500')
      seatInnerText("seat-40", counts);
      seatInnerText("total-seatBd",perSeat);
+     seatInnerText("Grand-Total",perSeat);
 
      const container =document.getElementById("element-3");
      const h1 =document.createElement("h1");
@@ -38,67 +62,45 @@ container.appendChild(div);
 
 const btn =document.getElementById("apply-btn");
 btn.addEventListener("click", function () {
-    const couponElement = document.getElementById("input-field").value;
-    const couponCode =couponElement.split(" ").join("").toUpperCase();
-    if (totalPrice <=2200) {
+    const couponCode = document.getElementById("coupon-text").value;
+    
+   
         if(couponCode === "NEW15"){
             const discountElement = document.getElementById("Grand-Total");
-            const discountAmount = totalPrice * 0.15;
-            discountElement.innerText = discountAmount.toFixed(2);
+            const grandTotal=parseInt(discountElement.innerText);
+            
+            const discountAmount = grandTotal * 0.15;
+            const calculatedGrandTotal=grandTotal-discountAmount;
+            
+        discountElement.innerText=calculatedGrandTotal;
 
-            const GrandTotal= document.getElementById("total-seatBd");
-            GrandTotal.innerText = total-seatBd - discountAmount.toFixed(2);
-            document.getElementById("input-field").value = "";
+        const couponContainer = document.getElementById("coupon-container");
+        couponContainer.classList.add("hidden");
+            // couponContainer.classList.add("hidden")
 
 
-        } else{
-            alert("Invalid Coupon");
-            document.getElementById("input-field").value = "";
-        }
-
-        if(couponCode === "Couple20"){
+        } 
+        else if(couponCode === "Couple 20"){
             const discountElement = document.getElementById("Grand-Total");
-            const discountAmount = totalPrice * 0.2;
-            discountElement.innerText = discountAmount.toFixed(2);
+            const grandTotal=parseInt(discountElement.innerText);
+            
+            const discountAmount = grandTotal * 0.2;
+            const calculatedGrandTotal=grandTotal-discountAmount;
+            
+        discountElement.innerText=calculatedGrandTotal;
+        const couponContainer = document.getElementById("coupon-container");
+        couponContainer.classList.add("hidden");
 
-            const GrandTotal= document.getElementById("total-seatBd");
-            GrandTotal.innerText = total-seatBd - discountAmount.toFixed(2);
-            document.getElementById("input-field").value = "";
 
-
-        } else{
-            alert("Invalid Coupon");
-            document.getElementById("input-field").value = "";
+        } 
+        else {
+            
+            alert("invalid coupon");
+        return;
         }
-
-
         }
-         else{
-            alert("Please at less buy 4 seat");
-            document.getElementById("input-field").value = "";
-
-        }
-        
-    }
+         
 );
-
-
-const totalTickets = 40;
-
-
-function buyTickets(numTickets) {
-   
-    if (numTickets <= 0) {
-        return "less no possible";
-    } else if (numTickets => 4) {
-        return "highest 4 ";
-    } else if (numTickets > totalTickets) {
-        return "no possible";
-    } else {
-        totalTickets -= numTickets; 
-        return " ${numTickets}  ${totalTickets}";
-    }
-}
 
 
 

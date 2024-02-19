@@ -300,13 +300,13 @@
                           <h1>Total Price</h1>
                           <h1>BDT <span id="total-seatBd">0</span></h1>
                          </div>
-                         <div class="mt-1">
-                          <input class="bg-white h-10" type="text" value="">
-                          <button id="apply-btn" class="btn  bg-[#1DD100]">Apply</button>
+                         <div id="coupon-container" class=" mt-1">
+                          <input id="coupon-text" class="bg-white h-10" type="text" value="">
+                          <button id="apply-btn" disabled class="btn  bg-[#1DD100]">Apply</button>
                          </div>
                          <div class="flex justify-between mt-1">
-                          <h1 id="Grand-Total">Grand Total</h1>
-                          <h1>BDT <span>0</span></h1>
+                          <h1 >Grand Total</h1>
+                          <h1>BDT <span id="Grand-Total">0</span></h1>
                          </div>
     
                       </div>
@@ -322,7 +322,7 @@
                         <div class="label">
                           <span class="label-text">Phone Number*</span>
                         </div>
-                        <input type="number" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <input id="phone-number"  type="number" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
                       </label>
                       <label class="form-control w-full max-w-xs">
                         <div class="label">
@@ -332,7 +332,7 @@
                       </label>
                       
                      </div>
-                     <div><button class="btn bg-[#1DD100] w-full mt-2"><a href="reward.html">Next</a></button>
+                     <div><button id="btn-next" disabled class="btn bg-[#1DD100] w-full mt-2"><a href="reward.html">Next</a></button>
                      
                     </div>
 
