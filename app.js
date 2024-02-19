@@ -14,7 +14,11 @@ for (const seat of allSeat) {
         alert("you cant buy more");
         return;
      }
+     console.log(event.target);
+     seat.setAttribute("disabled","true")
+     
      const button =document.getElementById('apply-btn');
+     
 
 
 if(count===4){
@@ -77,6 +81,13 @@ btn.addEventListener("click", function () {
         const couponContainer = document.getElementById("coupon-container");
         couponContainer.classList.add("hidden");
             // couponContainer.classList.add("hidden")
+           const Discount =document.getElementById("Discount");
+           const h1 =document.createElement("h1");
+           h1.innerText="Discount"
+           const h2 =document.createElement("h2");
+           h2.innerText = discountAmount ;
+           Discount.appendChild(h1);
+           Discount.appendChild(h2);
 
 
         } 
